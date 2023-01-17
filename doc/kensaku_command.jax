@@ -1,0 +1,60 @@
+*kensaku_command.jax*	バッファ内をローマ字で日本語検索する Kensaku コマンド
+
+Author:  Alisue <lambdalisue@gmail.com>
+License: MIT License (See LICENSE)
+
+
+=============================================================================
+CONTENTS					*kensaku-command-contents*
+
+INTRODUCTION			|kensaku-command-introduction|
+REQUIREMENTS			|kensaku-command-requirements|
+INTERFACE			|kensaku-command-interface|
+  COMMANDS			  |kensaku-command-commands|
+
+
+=============================================================================
+INTRODUCTION					*kensaku-command-introduction*
+
+*kensaku-command.vim* は lambdalisue/kensaku.vim を使ってローマ字による日本語
+検索を行う |:Kensaku| コマンドを提供するインテグレーションプラグインです。
+
+なお、オリジナルは haya14busa/vim-migemo の :Migemo コマンドで、このプラグイン
+は簡易版を lambdalisue/kensaku.vim を利用して提供しています。
+
+lambdalisue/kensaku.vim		https://github.com/lambdalisue/kensaku.vim
+haya14busa/vim-migemo		https://github.com/haya14busa/vim-migemo
+
+
+=============================================================================
+REQUIREMENTS					*kensaku-command-requirements*
+
+lambdalisue/kensaku.vim~
+	CMigemo 非依存で Migemo を用いたローマ字による日本語検索機能を提供する
+	ためのプラグイン
+	https://github.com/lambdalisue/kensaku.vim
+
+
+=============================================================================
+USAGE						*kensaku-command-usage*
+
+|:Kensaku| コマンドに対して以下のようにローマ字を含む検索ワードを指定します。
+>
+	:Kensaku kensaku
+<
+検索結果をハイライトしたい場合は |'hlsearch'| オプションを参照してください。
+
+
+=============================================================================
+INTERFACE					*kensaku-command-interface*
+
+-----------------------------------------------------------------------------
+COMMANDS					*kensaku-command-commands*
+
+							*:Kensaku*
+:Kensaku {query}
+	{query} をローマ字として解釈しバッファ内検索を行います。
+
+
+=============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
